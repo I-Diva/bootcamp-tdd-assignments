@@ -1,0 +1,22 @@
+{
+  "name": "bootcamp-tdd-assignments",
+  "version": "1.0.0",
+  "description": "Test Driven Development Assignments written in javascript",
+  "main": "tests",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/I-Diva/bootcamp-tdd-assignments.git"
+  },
+  "author": "Olayemi Awofadeju",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/I-Diva/bootcamp-tdd-assignments/issues"
+  },
+  "homepage": "https://github.com/I-Diva/bootcamp-tdd-assignments#readme"
+}
