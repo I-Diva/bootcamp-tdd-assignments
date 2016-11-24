@@ -16,8 +16,12 @@ for(i = 0; i<= numbers.length-1; i++){
 //  return smallest;
 
 }
+if(smallest == largest){
+  return [smallest];
+}
 
 return [smallest, largest];
 }
+
 }
 module.exports = app
