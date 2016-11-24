@@ -1,19 +1,40 @@
-var arr =[2,4,6,8,10];// [2,6,18,54]- Geometric
-var aritCount=0;
-var geoCount=0;
-    function aritGeo(){
-        for (var i=0;i<arr.length-2;i++){
-             if(arr[i+1]-arr[i]===arr[i+2]-arr[i+1]){
-                 aritCount++;
-            }
-            else if(arr[i+1]/arr[i] ===arr[i+2]/arr[i+1]){
-                 geoCount++;
-            }
-            else return "neither arithmetic nor geometric";
+   var app = {
+   aritGeo: function(arr)
+   
+{
+    var array_type = -1;
+    if (arr.length <= 2){
+      
+     return 0;
+    }
+
+    var a = arr[1], r = a/arr[0], i;
+    for (i = 2; i < arr.length; ++i) {
+        if ((a *= r) == arr[i]){
+            array_type = "Geometric";
         }
-         if(aritCount===arr.length-2)
-             return "Arthematic series";
-         else if(geocount===arr.length-2)
-             return "Geometric series";
-     }    
- console.log(aritGeo());
+        else{
+            array_type = -1;
+            break;
+        }
+    }
+
+    if (array_type == "Geometric")
+        return array_type;
+
+
+    a = arr[1], d = a - arr[0], i;
+    for (i = 2; i < arr.length; ++i) {
+        if ((a += d) == arr[i]){
+            array_type = "Arithmetic";
+        }
+        else {
+            array_type = -1;
+            break;
+        }
+    }
+    return array_type;
+}
+
+}
+module.exports = app
